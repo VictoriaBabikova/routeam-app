@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homePage');
 });
+Route::post('/project/search', [ProjectSearchController::class, 'SearchProgect'])->name('project_search');
+
+Route::get('/projects/show', [ProjectSearchController::class, 'ShowProjectsList'])->name('projects_show');

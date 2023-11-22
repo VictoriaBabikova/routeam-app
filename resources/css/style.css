@@ -1,0 +1,13 @@
+.contaner_card {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contaner_card > .card {
+    margin: 10px;
+    text-decoration: none;
+}
+.subject {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+}
